@@ -168,6 +168,22 @@ class Client
     }
 
     /**
+     * @param string $language
+     * @param int $count
+     * @return array
+     */
+    public function getLatestServiceReviews($language = 'nl', $count = 20) {
+        $query = [
+            'language'  => $language,
+            'count'     => $count,
+        ];
+
+        $url = 'reviews/latest';
+
+        return $this->makeRequest($url, [], $query, $this->endpointApi);
+    }
+
+    /**
      * @param string $businessUnitId
      * @return array
      * @throws InvitationException
