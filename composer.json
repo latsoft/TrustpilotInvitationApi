@@ -1,5 +1,5 @@
 {
-    "name": "itspirit/trustpilot-invitation-api",
+    "name": "latsoft/trustpilot-invitation-api",
     "description": "A PHP library for accessing the Trustpilot Invitation API and fetching recieved Product reviews",
     "license": "MIT",
     "type": "project",
@@ -27,7 +27,10 @@
         {
             "name": "Andrew Carter",
             "email": "andrew.carter@moneymaxim.co.uk"
-        }
+        },
+      {
+        "name": "latsoft"
+      }
     ],
     "autoload": {
         "psr-4": {
