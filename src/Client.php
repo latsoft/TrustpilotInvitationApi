@@ -35,7 +35,7 @@ class Client
      * @param GuzzleClientInterface $guzzle
      */
     public function __construct(
-        AccessToken $accessToken,
+        AccessToken $accessToken = null,
         \Logger $logger = null,
         $apiInvitationEndpoint = null,
         $invitationApiEndpoint = null,
@@ -168,12 +168,14 @@ class Client
     }
 
     /**
+     * @param $apikey
      * @param string $language
      * @param int $count
      * @return array
      */
-    public function getLatestServiceReviews($language = 'nl', $count = 20) {
+    public function getLatestServiceReviews($apikey, $language = 'nl', $count = 20) {
         $query = [
+            'apikey'    => $apikey,
             'language'  => $language,
             'count'     => $count,
         ];
